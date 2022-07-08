@@ -639,6 +639,12 @@ body {
 }
 
 @media screen and (max-width: 544px) {
+  .avatar {
+    width: 30px;
+  }
+  .logo {
+    width: 120px;
+  }
   body {
     padding: 0;
   }

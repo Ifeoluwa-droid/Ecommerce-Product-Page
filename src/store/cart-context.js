@@ -34,15 +34,15 @@ const CartProvider = props => {
 
     const totalItems = calculateTotalItems(cartItems);
 
-    const showCartHandler = () => {
+    const showCartHandler = useCallback(() => {
         setCartIsShown(prevValue => !prevValue);   // it can be changed to true
-    }
+    }, [])
 
-    const checkoutHandler = () => {
+    const checkoutHandler = useCallback(() => {
         setCartIsShown(false);
-    }
+    }, [])
 
-    const addItemToCartHandler = (itemData) => {
+    const addItemToCartHandler = useCallback((itemData) => {
         setCartItems(
             prevValue => {
                 return {
@@ -57,9 +57,9 @@ const CartProvider = props => {
                 }
             }
         )
-    }
+    }, [])
 
-    const removeItemFromCartHandler = (id) => { 
+    const removeItemFromCartHandler = useCallback((id) => { 
         /// The idea here is to delete the cart item completely
         setCartItems(
             prevValue => {
@@ -68,7 +68,7 @@ const CartProvider = props => {
                 return newValue;
             }
         )
-    }
+    }, [])
 
     const cartState = {
         totalItems: totalItems,

@@ -10,8 +10,6 @@ const Cart = props => {
 
     const cartContext = useContext(CartContext);
 
-    console.log('Cart running');
-
     let cartItems = [];
     for (let id in cartContext.cartItems) {
 

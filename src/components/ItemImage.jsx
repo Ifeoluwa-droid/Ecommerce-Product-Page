@@ -1,4 +1,3 @@
-
 const ItemImage = props => {
 
     return ( 

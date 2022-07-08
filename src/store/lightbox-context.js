@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { useState } from 'react';
 
 const LightboxContext = React.createContext({
@@ -11,13 +11,13 @@ const LightboxContext = React.createContext({
 const LightboxContextProvider = props => {
     const [lightboxShown, setLightboxShown] = useState(false);
 
-    const showLightboxHandler = () => {
+    const showLightboxHandler = useCallback(() => {
         setLightboxShown(true)
-    }
+    }, [])
 
-    const closeLightboxHandler = () => {
+    const closeLightboxHandler = useCallback(() => {
         setLightboxShown(false)
-    }
+    }, [])
 
     const lightboxState = {
         lightboxShown: lightboxShown,

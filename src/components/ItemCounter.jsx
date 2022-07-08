@@ -4,15 +4,11 @@ import { ThemeProvider} from '@mui/material';
 import theme from '../theme';
 import { IconButton } from '@mui/material';
 import { useContext } from 'react';
-import { CartContext } from '../store/cart-context';
 import { ItemCountContext } from '../store/item-count-context';
 
-const ItemCounter = props => {
+const ItemCounter = () => {
 
-    const cartContext = useContext(CartContext);
     const itemCountContext = useContext(ItemCountContext);
-    
-    console.log(cartContext.cartItems);
 
     const increaseByOne = () => {
         itemCountContext.addItem();
