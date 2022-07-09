@@ -1,7 +1,7 @@
 # Ecommerce-Product-Page
 A Frontend Mentor Challenge
 
-This project was built with React.js and Sass.
+This project was built with React.js, Material UI and Sass.
 
 The link to the website is below;
 
